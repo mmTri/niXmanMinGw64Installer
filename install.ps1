@@ -3,10 +3,10 @@ $MinGw64Prefix = 'C:\MinGw64Test' # テスト用
 $MinGw64URL = 'https://github.com/niXman/mingw-builds-binaries/releases/download/13.1.0-rt_v11-rev1/x86_64-13.1.0-release-posix-seh-ucrt-rt_v11-rev1.7z'
 
 
-# 7zipの実行ファイルを取得しカレントディレクトリに保存
+# 7zipの実行ファイルを取得し保存
 function Get-7zip {
     Param(
-        [string] $workDir
+        [string] $workDir = '.'
     )
     $url = 'https://www.7-zip.org/a/7zr.exe'
     $exe = '7zr.exe'
@@ -18,10 +18,10 @@ function Get-7zip {
     return $path
 }
 
-# 
+# mingwのアーカイブを取得し保存 
 function Get-MinGw64 {
     Param(
-        [string] $workDir,
+        [string] $workDir = '.',
         [string] $url = $MinGw64URL
     )
     $file = 'mingw64.7z'
