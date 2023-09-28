@@ -1,0 +1,1 @@
+# niXmanMinGw64Installer
